@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>      
+    <div class="container">
+        <div class="profile-section">
+            <div class="circle">Kevin</div>
+            <h1>I'M Kevinz.1</h1>
+            <div class="intro">
+                <P class="tittle">Hello, I'am <span class="auto-type">Programmer</span></P>
+            </div>
+            <p class="description">TEKNIK INFORMATIKA.</p>
+            <div class="button-group">  
+                <!-- Menambahkan ID pada tombol -->
+                <a href="#" class="btn" id="aboutMeBtn">Tentang Saya</a>
+                <a href="#" class="btn" id="pengalamanBtn">Pengalaman</a>
+                <a href="#" class="btn" id="portfolioBtn">Portofolio</a>
+            </div>
+        </div>
+    </div>
+
+   <!-- Modal untuk About Me -->
+<div id="aboutMeModal" class="modal">
+    <div class="modal-box">
+        <span class="close-btn">&times;</span>
+        <h1>Tentang Saya</h1>
+        <img src="image/apin.png" alt="Foto Saya" class="profile-image" />
+        <p>Hallo, Saya kevin ifanka umur saya 18 tahun ini adalah salah satu portofolio yang saya buat menggunakan beberapa bahasa pemograman. Saya tertarik mempelajari pemoggraman komputer sejak sekolah menengah kejuruan pada duduk di bangku SMK. Saya menjadi salah satu peserta uji kompotensi keahlian komputer terbaik saat ujian. Setelah itu saya melanjutkan pendidikan diploma dan Tahun 2022 Alhamdulillah saya masuk di jurusan teknik informatika Universitas Sumatera Utara.</p>
+        <div class="divider"></div>
+        <h3>KENAPA TERTARIK DENGAN PEMOGGRAMAN?</h3>
+        <img src="image/foto1.png" alt="Foto Saya" class="profile-image" />
+        <p align="justify">Kenapa tertarik dengan pemoggraman, seiring berjalannya waktu 
+            dunia digital ini berkembang dengan cepat, terutama dunia teknologi dan ilmu komputer. 
+            Dengan pemograman ini saya tertarik untuk membuat sebuah aplikasi web untuk dikembangkan dan dipublish. 
+            Saya tertarik menjadi seorang FRONTEND developer yang bisa mengubah ide-ide kreatif menjadi 
+            tampilan antarmuka yang menarik dan digunakan oleh pengguna. Selain itu, saya suka tantangan dan 
+            logika dalam pemrograman sehingga saya selalu termotivasi untuk mempelajari teknologi dan framework baru 
+            yang terus berkembang di dunia Front-End.</p>
+        <div class="divider"></div>
+        <h1>Riwayat Pendidikan</h1>
+        <div class="divider"></div>
+        <ul class="list">
+            <li>SMP TIK DARUSSALAM</li>
+            <li>SMP SWASTA DARUSSALAM</li>
+            <li>SD SWASTA BAKTI LUHUR</li>
+        </ul>
+        <img src="image/wi.jpg" alt="Foto Saya" class="profile-image" />
+    </div>
+</div>
+
+<!-- Modal untuk Portofolio -->
+<div id="portfolioModal" class="modal">
+    <div class="modal-box">
+        <span class="close-btn">&times;</span>
+        <h1>Portofolio</h1>
+        <p>Ini adalah halaman Portofolio Anda.</p>
+    </div>
+</div>
+            
+            
+    <script>
+        const aboutMeBtn = document.getElementById('aboutMeBtn');
+        const aboutMeModal = document.getElementById('aboutMeModal');
+        const portfolioBtn = document.getElementById('portfolioBtn');
+        const portfolioModal = document.getElementById('portfolioModal');
+        const closeBtns = document.querySelectorAll('.close-btn');
+
+        // Function to open the About Me modal
+        aboutMeBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            closeAllModals(); // Close any open modals before opening the new one
+            aboutMeModal.classList.add('show');
+        });
+
+        // Function to open the Portofolio modal
+        portfolioBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            closeAllModals(); // Close any open modals before opening the new one
+            portfolioModal.classList.add('show');
+        });
+
+        // Function to close all modals
+        function closeAllModals() {
+            aboutMeModal.classList.remove('show');
+            portfolioModal.classList.remove('show');
+        }
+
+        // Close modals when the close button is clicked
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                closeAllModals();
+            });
+        });
+
+        // Close the modals when clicking outside of them
+        window.addEventListener('click', function(event) {
+            if (event.target === aboutMeModal) {
+                aboutMeModal.classList.remove('show');
+            }
+            if (event.target === portfolioModal) {
+                portfolioModal.classList.remove('show');
+            }
+        });
+    </script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["Programmer", "Youtuber"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true
+        });
+    </script> 
+</body>
+</html>

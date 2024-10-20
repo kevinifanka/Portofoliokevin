@@ -1,0 +1,221 @@
+/* style.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('image/foto.jpg'); /* Ganti dengan gambar background */
+    background-size: cover ;
+    background-position: center; /* Gambar selalu berada di tengah */
+    background-attachment: fixed; /* Mencegah gambar bergerak saat di-scroll */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Transparansi */
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto 20px auto;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Jarak antar tombol */
+    flex-wrap: wrap; /* Menumpuk tombol jika layar kecil */
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    flex-basis: 30%; /* Set tombol agar menyesuaikan lebar */
+    text-align: center;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #333;
+}
+
+/* Gaya untuk modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background: rgba(0, 0, 0, 0.6); /* Transparansi */
+    opacity: 0; /* Start as invisible */
+    transition: opacity 0.5s ease; /* Transition for fade effect */
+}
+
+.modal-box h2 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #dcdbdb; /* Warna teks judul untuk kontras */
+}
+
+.modal-box h4 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #cccccc; /* Warna teks sekunder */
+}
+
+.modal-box h1 {
+    font-size: 32px;
+    margin: 10px 0;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.divider {
+    width: 500px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 10px auto;
+}
+
+.experience-content {
+    display: none;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.modal-box p {
+    text-align: justify;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal {
+    position: fixed; /* Tetap di tempat meskipun di-scroll */
+    touch-action: none; /* Mencegah modal digeser pada perangkat dengan layar sentuh */
+}
+
+.li {
+    text-decoration: none;
+}
+
+
+
+#aboutMeModal .modal-box {
+    color: white;
+    margin: 15% auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    max-width: 500px;
+}
+
+#portfolioModal .modal-box {
+    color: white;
+    margin: 15% auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    max-width: 500px;
+
+} .modal-box {
+    color: white;
+    margin: 15% auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    max-width: 500px;
+}
+
+.close-btn {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fafafa;
+}
+
+.close-btn:hover {
+    color: #f00;
+}
+
+.profile-image {
+    color: #fff;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        flex-basis: 100%; /* Tombol memenuhi layar */
+    }
+
+    .circle {
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .modal-box {
+        max-width: 90%;
+    }
+}
